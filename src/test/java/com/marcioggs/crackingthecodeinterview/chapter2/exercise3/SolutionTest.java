@@ -1,15 +1,16 @@
-package com.marcioggs.crackingthecodeinterview.chapter2;
+package com.marcioggs.crackingthecodeinterview.chapter2.exercise3;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
+import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 import org.junit.Test;
 
 public class SolutionTest {
 
     @Test
     public void singleElementShouldNotBeChanged() {
-        LinkedListNode<Integer> el1 = new LinkedListNode<>(1, null);
+        SingleLinkedListNode<Integer> el1 = new SingleLinkedListNode<>(1, null);
 
         Solution.deleteMiddleNode(el1);
 
@@ -19,8 +20,8 @@ public class SolutionTest {
 
     @Test
     public void twoElementsShouldNotBeChanged() {
-        LinkedListNode<Integer> el2 = new LinkedListNode<>(2, null);
-        LinkedListNode<Integer> el1 = new LinkedListNode<>(1, el2);
+        SingleLinkedListNode<Integer> el2 = new SingleLinkedListNode<>(2, null);
+        SingleLinkedListNode<Integer> el1 = new SingleLinkedListNode<>(1, el2);
 
         Solution.deleteMiddleNode(el1);
 
@@ -32,9 +33,9 @@ public class SolutionTest {
 
     @Test
     public void threeElementsShouldRemoveSecondElement() {
-        LinkedListNode<Integer> el3 = new LinkedListNode<>(3, null);
-        LinkedListNode<Integer> el2 = new LinkedListNode<>(2, el3);
-        LinkedListNode<Integer> el1 = new LinkedListNode<>(1, el2);
+        SingleLinkedListNode<Integer> el3 = new SingleLinkedListNode<>(3, null);
+        SingleLinkedListNode<Integer> el2 = new SingleLinkedListNode<>(2, el3);
+        SingleLinkedListNode<Integer> el1 = new SingleLinkedListNode<>(1, el2);
 
         Solution.deleteMiddleNode(el1);
 
@@ -46,10 +47,10 @@ public class SolutionTest {
 
     @Test
     public void fourElementsShouldRemoveThirdElement() {
-        LinkedListNode<Integer> el4 = new LinkedListNode<>(4, null);
-        LinkedListNode<Integer> el3 = new LinkedListNode<>(3, el4);
-        LinkedListNode<Integer> el2 = new LinkedListNode<>(2, el3);
-        LinkedListNode<Integer> el1 = new LinkedListNode<>(1, el2);
+        SingleLinkedListNode<Integer> el4 = new SingleLinkedListNode<>(4, null);
+        SingleLinkedListNode<Integer> el3 = new SingleLinkedListNode<>(3, el4);
+        SingleLinkedListNode<Integer> el2 = new SingleLinkedListNode<>(2, el3);
+        SingleLinkedListNode<Integer> el1 = new SingleLinkedListNode<>(1, el2);
 
         Solution.deleteMiddleNode(el1);
 

@@ -1,4 +1,6 @@
-package com.marcioggs.crackingthecodeinterview.chapter2;
+package com.marcioggs.crackingthecodeinterview.chapter2.exercise3;
+
+import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 
 /**
  * Delete Middle Node: Implement an algorithm to delete a node in the middle (i.e., any node but
@@ -10,15 +12,15 @@ package com.marcioggs.crackingthecodeinterview.chapter2;
  */
 public class Solution {
 
-    public static <T> void deleteMiddleNode(LinkedListNode<T> initial) {
+    public static <T> void deleteMiddleNode(SingleLinkedListNode<T> initial) {
 
         if (initial == null || initial.next == null || initial.next.next == null) {
             return;
         }
 
-        LinkedListNode<T> current = initial;
-        LinkedListNode<T> previous = null;
-        LinkedListNode<T> runner = initial;
+        SingleLinkedListNode<T> current = initial;
+        SingleLinkedListNode<T> previous = null;
+        SingleLinkedListNode<T> runner = initial;
 
         while (runner.next != null) {
             previous = current;
