@@ -43,4 +43,11 @@ public class SetOfStacks<T> {
 
     return popped;
   }
+
+  public T popAt(int index) {
+    if (index > this.stacks.size() - 1) {
+      throw new IllegalArgumentException();
+    }
+    return this.stacks.get(index).pop();
+  }
 }

@@ -48,4 +48,27 @@ public class SetOfStacksTest {
     assertEquals(secondItem, setOfStacks.pop());
     assertEquals(firstItem, setOfStacks.pop());
   }
+
+  @Test
+  public void popAtIndexShouldWork() {
+    SetOfStacks<Integer> setOfStacks = new SetOfStacks<>(2);
+
+    Integer firstItem = 1;
+    Integer secondItem = 2;
+    Integer thirdItem = 3;
+    Integer fourthItem = 4;
+
+    setOfStacks.push(firstItem);
+    setOfStacks.push(secondItem);
+    setOfStacks.push(thirdItem);
+    setOfStacks.push(fourthItem);
+
+    assertEquals(secondItem, setOfStacks.popAt(0));
+    assertEquals(firstItem, setOfStacks.popAt(0));
+    assertEquals(fourthItem, setOfStacks.popAt(1));
+    assertEquals(thirdItem, setOfStacks.popAt(1));
+
+    Assert.assertThrows(EmptyStackException.class, () -> setOfStacks.popAt(0));
+    Assert.assertThrows(EmptyStackException.class, () -> setOfStacks.popAt(1));
+  }
 }
