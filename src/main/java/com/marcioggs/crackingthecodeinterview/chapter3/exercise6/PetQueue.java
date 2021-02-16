@@ -4,7 +4,6 @@ import lombok.SneakyThrows;
 
 import java.time.LocalDateTime;
 import java.util.LinkedList;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -39,10 +38,6 @@ public class PetQueue {
   }
 
   public Pet dequeueAny() {
-    if (this.catQueue.size() == 0 && this.dogQueue.size() == 0) {
-      throw new NoSuchElementException();
-    }
-
     if (this.dogQueue.size() == 0) {
       return this.catQueue.remove();
     }
