@@ -1,36 +1,61 @@
 package com.marcioggs.crackingthecodeinterview.chapter3.exercise6;
 
+import lombok.SneakyThrows;
+
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
+/**
+ * The enqueue methods sleeps to prevent the object to have the same exact LocalDateTime, which
+ * yelds wrong results when using dequeueAny.
+ */
 public class PetQueue {
 
-  private final LinkedList<Pet> queue = new LinkedList<>();
+  private final LinkedList<Cat> catQueue = new LinkedList<>();
+  private final LinkedList<Dog> dogQueue = new LinkedList<>();
 
-  public boolean enqueue(Pet pet) {
-    return this.queue.add(pet);
+  @SneakyThrows
+  public boolean enqueue(Cat cat) {
+    TimeUnit.MILLISECONDS.sleep(10);
+    cat.setReceivedDateTime(LocalDateTime.now());
+    return this.catQueue.add(cat);
+  }
+
+  @SneakyThrows
+  public boolean enqueue(Dog dog) {
+    TimeUnit.MILLISECONDS.sleep(10);
+    dog.setReceivedDateTime(LocalDateTime.now());
+    return this.dogQueue.add(dog);
   }
 
   public Cat dequeueCat() {
-    Optional<Cat> oldestCat =
-        this.queue.stream().filter(pet -> pet instanceof Cat).map(pet -> (Cat) pet).findFirst();
-
-    oldestCat.ifPresent(this.queue::remove);
-
-    return oldestCat.orElseThrow(NoSuchElementException::new);
+    return this.catQueue.remove();
   }
 
   public Dog dequeueDog() {
-    Optional<Dog> oldestDog =
-        this.queue.stream().filter(pet -> pet instanceof Dog).map(pet -> (Dog) pet).findFirst();
-
-    oldestDog.ifPresent(this.queue::remove);
-
-    return oldestDog.orElseThrow(NoSuchElementException::new);
+    return this.dogQueue.remove();
   }
 
   public Pet dequeueAny() {
-    return this.queue.remove();
+    if (this.catQueue.size() == 0 && this.dogQueue.size() == 0) {
+      throw new NoSuchElementException();
+    }
+
+    if (this.dogQueue.size() == 0) {
+      return this.catQueue.remove();
+    }
+
+    if (this.catQueue.size() == 0) {
+      return this.dogQueue.remove();
+    }
+
+    return this.catQueue
+            .peek()
+            .getReceivedDateTime()
+            .isBefore(this.dogQueue.peek().getReceivedDateTime())
+        ? this.dequeueCat()
+        : this.dequeueDog();
   }
 }
