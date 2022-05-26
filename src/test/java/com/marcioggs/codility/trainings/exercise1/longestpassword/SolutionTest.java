@@ -1,4 +1,4 @@
-package com.marcioggs.codility.exercise1.longestpassword;
+package com.marcioggs.codility.trainings.exercise1.longestpassword;
 
 import org.junit.Test;
 
