@@ -1,7 +1,8 @@
 package com.marcioggs.crackingthecodeinterview.chapter4.exercise6;
 
-import com.marcioggs.crackingthecodeinterview.chapter4.BinarySearchTreeNodeWithParentRef;
 import static org.junit.Assert.assertEquals;
+
+import com.marcioggs.crackingthecodeinterview.chapter4.BinarySearchTreeNodeWithParentRef;
 import org.junit.Before;
 import org.junit.Test;
 

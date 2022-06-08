@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class SingleLinkedListNode<T> {
-    public T value;
-    public SingleLinkedListNode<T> next;
+
+  public T value;
+  public SingleLinkedListNode<T> next;
 }

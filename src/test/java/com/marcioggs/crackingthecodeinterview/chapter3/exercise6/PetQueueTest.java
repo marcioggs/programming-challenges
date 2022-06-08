@@ -1,11 +1,10 @@
 package com.marcioggs.crackingthecodeinterview.chapter3.exercise6;
 
-import org.junit.Test;
-
-import java.util.NoSuchElementException;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+
+import java.util.NoSuchElementException;
+import org.junit.Test;
 
 public class PetQueueTest {
 

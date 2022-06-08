@@ -1,7 +1,8 @@
 package com.marcioggs.crackingthecodeinterview.chapter2.exercise4;
 
-import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 import static org.junit.Assert.assertTrue;
+
+import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 import org.junit.Test;
 
 public class SolutionTest {

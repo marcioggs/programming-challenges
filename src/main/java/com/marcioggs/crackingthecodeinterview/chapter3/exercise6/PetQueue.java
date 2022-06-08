@@ -1,10 +1,9 @@
 package com.marcioggs.crackingthecodeinterview.chapter3.exercise6;
 
-import lombok.SneakyThrows;
-
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
+import lombok.SneakyThrows;
 
 /**
  * The enqueue methods sleeps to prevent the object to have the same exact LocalDateTime, which
@@ -47,9 +46,9 @@ public class PetQueue {
     }
 
     return this.catQueue
-            .peek()
-            .getReceivedDateTime()
-            .isBefore(this.dogQueue.peek().getReceivedDateTime())
+        .peek()
+        .getReceivedDateTime()
+        .isBefore(this.dogQueue.peek().getReceivedDateTime())
         ? this.dequeueCat()
         : this.dequeueDog();
   }

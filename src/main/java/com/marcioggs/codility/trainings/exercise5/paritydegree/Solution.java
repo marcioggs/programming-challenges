@@ -5,24 +5,24 @@ package com.marcioggs.codility.trainings.exercise5.paritydegree;
  */
 public class Solution {
 
-    public int solution(int number) {
+  public int solution(int number) {
 
-        if (number % 2 == 1) {
-            return 0;
-        }
-
-        int power = 1;
-        int lastPowerOfTwo = 0;
-
-        while (power <= number) {
-
-            if (number % Math.pow(2, power) == 0) {
-                lastPowerOfTwo = power;
-            }
-
-            power++;
-        }
-
-        return lastPowerOfTwo;
+    if (number % 2 == 1) {
+      return 0;
     }
+
+    int power = 1;
+    int lastPowerOfTwo = 0;
+
+    while (power <= number) {
+
+      if (number % Math.pow(2, power) == 0) {
+        lastPowerOfTwo = power;
+      }
+
+      power++;
+    }
+
+    return lastPowerOfTwo;
+  }
 }

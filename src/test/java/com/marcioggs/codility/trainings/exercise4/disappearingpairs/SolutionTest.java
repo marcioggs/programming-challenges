@@ -1,15 +1,15 @@
 package com.marcioggs.codility.trainings.exercise4.disappearingpairs;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class SolutionTest {
 
-    @Test
-    public void test() {
-        assertEquals("AC", new Solution().solution("ACCAABBC"));
-        assertEquals("", new Solution().solution("ABCBBCBA"));
-    }
+  @Test
+  public void test() {
+    assertEquals("AC", new Solution().solution("ACCAABBC"));
+    assertEquals("", new Solution().solution("ABCBBCBA"));
+  }
 
 }

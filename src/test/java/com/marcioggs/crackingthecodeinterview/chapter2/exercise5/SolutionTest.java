@@ -1,9 +1,9 @@
 package com.marcioggs.crackingthecodeinterview.chapter2.exercise5;
 
+import static org.junit.Assert.assertEquals;
+
 import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class SolutionTest {
 

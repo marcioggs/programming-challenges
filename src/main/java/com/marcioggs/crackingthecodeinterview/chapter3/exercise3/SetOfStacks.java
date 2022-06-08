@@ -1,6 +1,8 @@
 package com.marcioggs.crackingthecodeinterview.chapter3.exercise3;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class SetOfStacks<T> {
 
