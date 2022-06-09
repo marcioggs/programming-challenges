@@ -44,7 +44,7 @@ public class Solution {
       }
     } while (lastIterationHadChanges);
 
-    return String.join(", ", projectOrder);
+    return allProjects.isEmpty() ? String.join(", ", projectOrder) : "";
   }
 
   private Map<String, Project> createProjects(String[] projects) {

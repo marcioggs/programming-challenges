@@ -21,5 +21,12 @@ public class SolutionTest {
         "",
         new Solution()
             .findBuildOrder(new String[] {"a", "b"}, new String[][] {{"a", "b"}, {"b", "a"}}));
+
+    assertEquals(
+        "",
+        new Solution()
+            .findBuildOrder(
+                new String[] {"c", "d", "a", "b"},
+                new String[][] {{"c", "d"}, {"a", "b"}, {"b", "a"}}));
   }
 }
