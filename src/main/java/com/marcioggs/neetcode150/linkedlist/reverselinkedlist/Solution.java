@@ -1,5 +1,7 @@
 package com.marcioggs.neetcode150.linkedlist.reverselinkedlist;
 
+import com.marcioggs.neetcode150.linkedlist.ListNode;
+
 /**
  * https://leetcode.com/problems/reverse-linked-list
  *
