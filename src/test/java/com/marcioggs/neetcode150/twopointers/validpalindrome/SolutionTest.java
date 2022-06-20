@@ -1,7 +1,8 @@
-package com.marcioggs.neetcode150.twopointers;
+package com.marcioggs.neetcode150.twopointers.validpalindrome;
 
 import static org.junit.Assert.assertEquals;
 
+import com.marcioggs.neetcode150.twopointers.validpalindrome.Solution;
 import org.junit.Test;
 
 public class SolutionTest {

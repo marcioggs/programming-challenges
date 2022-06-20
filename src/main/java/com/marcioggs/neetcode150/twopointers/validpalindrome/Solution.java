@@ -1,4 +1,4 @@
-package com.marcioggs.neetcode150.twopointers;
+package com.marcioggs.neetcode150.twopointers.validpalindrome;
 
 /**
  * https://leetcode.com/problems/valid-palindrome/
