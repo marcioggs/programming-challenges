@@ -1,4 +1,4 @@
-package com.marcioggs.neetcode150.heappriorityqueue;
+package com.marcioggs.neetcode150.heappriorityqueue.kthlargest;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

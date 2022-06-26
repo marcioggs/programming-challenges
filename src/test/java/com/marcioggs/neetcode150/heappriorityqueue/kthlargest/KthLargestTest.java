@@ -1,7 +1,8 @@
-package com.marcioggs.neetcode150.heappriorityqueue;
+package com.marcioggs.neetcode150.heappriorityqueue.kthlargest;
 
 import static org.junit.Assert.assertEquals;
 
+import com.marcioggs.neetcode150.heappriorityqueue.kthlargest.KthLargest;
 import org.junit.Test;
 
 public class KthLargestTest {
