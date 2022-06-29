@@ -11,14 +11,14 @@ public class SolutionTest {
     assertEquals(4, new Solution().maxSubArray(new int[] {-1, 1, 2, 1}));
     assertEquals(
         6,
-        new Solution2()
+        new Solution()
             .maxSubArray(
                 new int[] {
                   -2, 1, -3, 4, -1, 2, 1, -5,
                 }));
     assertEquals(
         1,
-        new Solution2()
+        new Solution()
             .maxSubArray(
                 new int[] {
                   1,
