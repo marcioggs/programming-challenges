@@ -18,21 +18,10 @@ public class Solution {
     public Node copyRandomList(Node head) {
 
       var node = head;
-      Node previousNodeCopy = null;
       var originalToCopyMap = new HashMap<Node, Node>();
-      Node copyHead = null;
 
       while (node != null) {
         var nodeCopy = new Node(node.val);
-
-        if (previousNodeCopy != null) {
-          previousNodeCopy.next = nodeCopy;
-        }
-        previousNodeCopy = nodeCopy;
-
-        if (copyHead == null) {
-          copyHead = nodeCopy;
-        }
         originalToCopyMap.put(node, nodeCopy);
         node = node.next;
       }
@@ -40,14 +29,13 @@ public class Solution {
       node = head;
 
       while (node != null) {
-        if (node.random != null) {
-          var nodeCopy = originalToCopyMap.get(node);
-          nodeCopy.random = originalToCopyMap.get(node.random);
-        }
+        var nodeCopy = originalToCopyMap.get(node);
+        nodeCopy.next = originalToCopyMap.get(node.next);
+        nodeCopy.random = originalToCopyMap.get(node.random);
         node = node.next;
       }
 
-      return copyHead;
+      return originalToCopyMap.get(head);
     }
   }
 }
