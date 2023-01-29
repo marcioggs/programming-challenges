@@ -5,39 +5,23 @@ import java.util.ArrayDeque;
 
 public class MyQueue<T> {
     private final Deque<T> head = new ArrayDeque<>();
-    private final Deque<T> tail = new ArrayDeque<>();
+    private final Deque<T> tail = new ArrayDeque<>(); // 54321
 
     public void add(T element) {
-        tail.push(element);
-
         while (!head.isEmpty()) {
             tail.push(head.pop());
         }
 
-        head.push(element);
-
-        while (tail.size() != head.size()) {
-            head.push(tail.pop());
-        }
+        tail.push(element);
     }
 
     public T remove() throws IllegalStateException {
-        if (head.isEmpty()) {
-            throw new IllegalStateException("No element left to remove.");
-        }
-
-        T removed = head.pop();
-
         while (!tail.isEmpty()) {
             head.push(tail.pop());
         }
-
-        head.pop();
-
-        while (head.size() != tail.size()) {
-            tail.push(head.pop());
+        if (head.isEmpty()) {
+            throw new IllegalStateException("No element left to remove.");
         }
-
-        return removed;
+        return head.pop();
     }
 }
