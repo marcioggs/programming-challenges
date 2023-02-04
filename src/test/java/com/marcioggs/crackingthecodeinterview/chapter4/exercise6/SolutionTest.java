@@ -2,7 +2,7 @@ package com.marcioggs.crackingthecodeinterview.chapter4.exercise6;
 
 import static org.junit.Assert.assertEquals;
 
-import com.marcioggs.crackingthecodeinterview.chapter4.BinarySearchTreeNodeWithParentRef;
+import com.marcioggs.crackingthecodeinterview.chapter4.BinaryTreeNodeWithParentRef;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,27 +21,27 @@ import org.junit.Test;
  */
 public class SolutionTest {
 
-  private BinarySearchTreeNodeWithParentRef<Integer> node1;
-  private BinarySearchTreeNodeWithParentRef<Integer> node2;
-  private BinarySearchTreeNodeWithParentRef<Integer> node3;
-  private BinarySearchTreeNodeWithParentRef<Integer> node4;
-  private BinarySearchTreeNodeWithParentRef<Integer> node5;
-  private BinarySearchTreeNodeWithParentRef<Integer> node6;
-  private BinarySearchTreeNodeWithParentRef<Integer> node7;
-  private BinarySearchTreeNodeWithParentRef<Integer> node8;
-  private BinarySearchTreeNodeWithParentRef<Integer> node9;
+  private BinaryTreeNodeWithParentRef<Integer> node1;
+  private BinaryTreeNodeWithParentRef<Integer> node2;
+  private BinaryTreeNodeWithParentRef<Integer> node3;
+  private BinaryTreeNodeWithParentRef<Integer> node4;
+  private BinaryTreeNodeWithParentRef<Integer> node5;
+  private BinaryTreeNodeWithParentRef<Integer> node6;
+  private BinaryTreeNodeWithParentRef<Integer> node7;
+  private BinaryTreeNodeWithParentRef<Integer> node8;
+  private BinaryTreeNodeWithParentRef<Integer> node9;
 
   @Before
   public void setup() {
-    node1 = new BinarySearchTreeNodeWithParentRef<>(1, null, null, null);
-    node2 = new BinarySearchTreeNodeWithParentRef<>(2, null, null, null);
-    node3 = new BinarySearchTreeNodeWithParentRef<>(3, null, null, null);
-    node4 = new BinarySearchTreeNodeWithParentRef<>(4, null, null, null);
-    node5 = new BinarySearchTreeNodeWithParentRef<>(5, null, null, null);
-    node6 = new BinarySearchTreeNodeWithParentRef<>(6, null, null, null);
-    node7 = new BinarySearchTreeNodeWithParentRef<>(7, null, null, null);
-    node8 = new BinarySearchTreeNodeWithParentRef<>(8, null, null, null);
-    node9 = new BinarySearchTreeNodeWithParentRef<>(9, null, null, null);
+    node1 = new BinaryTreeNodeWithParentRef<>(1, null, null, null);
+    node2 = new BinaryTreeNodeWithParentRef<>(2, null, null, null);
+    node3 = new BinaryTreeNodeWithParentRef<>(3, null, null, null);
+    node4 = new BinaryTreeNodeWithParentRef<>(4, null, null, null);
+    node5 = new BinaryTreeNodeWithParentRef<>(5, null, null, null);
+    node6 = new BinaryTreeNodeWithParentRef<>(6, null, null, null);
+    node7 = new BinaryTreeNodeWithParentRef<>(7, null, null, null);
+    node8 = new BinaryTreeNodeWithParentRef<>(8, null, null, null);
+    node9 = new BinaryTreeNodeWithParentRef<>(9, null, null, null);
 
     node6.setLeft(node2);
     node6.setRight(node7);

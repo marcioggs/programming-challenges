@@ -1,6 +1,6 @@
 package com.marcioggs.crackingthecodeinterview.chapter4.exercise6;
 
-import com.marcioggs.crackingthecodeinterview.chapter4.BinarySearchTreeNodeWithParentRef;
+import com.marcioggs.crackingthecodeinterview.chapter4.BinaryTreeNodeWithParentRef;
 
 /**
  * Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary
@@ -8,13 +8,13 @@ import com.marcioggs.crackingthecodeinterview.chapter4.BinarySearchTreeNodeWithP
  */
 public class Solution {
 
-  public <T> BinarySearchTreeNodeWithParentRef<T> findNextNode(
-      BinarySearchTreeNodeWithParentRef<T> currentNode) {
+  public <T> BinaryTreeNodeWithParentRef<T> findNextNode(
+      BinaryTreeNodeWithParentRef<T> currentNode) {
 
     if (currentNode.getRight() != null) {
-      currentNode = currentNode.getRight();
+      currentNode = (BinaryTreeNodeWithParentRef<T>) currentNode.getRight();
       while (currentNode.getLeft() != null) {
-        currentNode = currentNode.getLeft();
+        currentNode = (BinaryTreeNodeWithParentRef<T>) currentNode.getLeft();
       }
       return currentNode;
     } else if (currentNode.getParent() == null) {
