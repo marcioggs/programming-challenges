@@ -8,6 +8,10 @@ import com.marcioggs.crackingthecodeinterview.chapter4.BinaryTreeNodeWithParentR
  */
 public class Solution {
 
+  public static void main(String[] args) {
+    System.out.println(Math.ceil((double)(1 - 0 ) / 2));
+  }
+
   public <T> BinaryTreeNodeWithParentRef<T> findNextNode(
       BinaryTreeNodeWithParentRef<T> currentNode) {
 
