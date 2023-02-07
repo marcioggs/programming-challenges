@@ -67,4 +67,18 @@ public class SolutionTest {
 
         assertEquals(false, new Solution().isBST(node1));
     }
+
+    @Test
+    public void isBST7() {
+        BinaryTreeNode<Integer> node1 = new BinaryTreeNode<>(20);
+        BinaryTreeNode<Integer> node2 = new BinaryTreeNode<>(10);
+        BinaryTreeNode<Integer> node3 = new BinaryTreeNode<>(25);
+        BinaryTreeNode<Integer> node4 = new BinaryTreeNode<>(30);
+
+        node1.setLeft(node2);
+        node2.setRight(node3);
+        node1.setRight(node4);
+
+        assertEquals(false, new Solution().isBST(node1));
+    }
 }

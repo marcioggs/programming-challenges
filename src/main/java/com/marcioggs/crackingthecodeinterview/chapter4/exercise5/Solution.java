@@ -5,7 +5,19 @@ import com.marcioggs.crackingthecodeinterview.chapter4.BinaryTreeNode;
 public class Solution {
 
     public <T extends Comparable<T>> boolean isBST(BinaryTreeNode<T> node) {
-        return (node.getLeft() == null || (node.getLeft().getValue().compareTo(node.getValue()) < 0 && isBST(node.getLeft()))) &&
-               (node.getRight() == null || (node.getRight().getValue().compareTo(node.getValue()) > 0  && isBST(node.getRight())));
+        return isBST(node, null, null);
+    }
+
+    private <T extends Comparable<T>> boolean isBST(BinaryTreeNode<T> node, T minValue, T maxValue) {
+        if (node == null) {
+            return true;
+        }
+
+        if ((minValue != null && node.getValue().compareTo(minValue) < 0) ||
+                (maxValue != null && node.getValue().compareTo(maxValue) > 0)) {
+            return false;
+        }
+
+        return isBST(node.getLeft(), minValue, node.getValue()) && isBST(node.getRight(), node.getValue(), maxValue);
     }
 }
