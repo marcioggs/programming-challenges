@@ -2,11 +2,11 @@ package com.marcioggs.crackingthecodeinterview.chapter10.exercise2;
 
 import java.util.*;
 
-public class Solution {
+public class Solution1 {
 
     public static void main(String[] args) {
         String[] words = new String[] {"aabb", "aacc", "bbaa", "ccaa"};
-        new Solution().groupAnagrams(words);
+        new Solution1().groupAnagrams(words);
 
         for (String word : words) {
             System.out.println(word);
