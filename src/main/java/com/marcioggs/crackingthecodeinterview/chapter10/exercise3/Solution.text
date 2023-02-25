@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Solution {
+
+    public int searchInRotatedArray(int[] rotatedArray) {
+
+        int left = 0;
+        int mid = rotatedArray.length / 2;
+
+        while () {
+
+        }
+    }
+}
