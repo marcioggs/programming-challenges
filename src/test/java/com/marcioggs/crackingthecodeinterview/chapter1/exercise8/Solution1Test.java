@@ -4,14 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SolutionTest {
+public class Solution1Test {
 
     @Test
     public void zeroMatrix3x3() {
         int[][] matrix = new int[][] {{0, 2, 3}, {4, 5, 6}, {7, 0, 9}, {10, 11, 12}};
         int[][] expected = new int[][] {{0, 0, 0}, {0, 0, 6}, {0, 0, 0}, {0, 0, 12}};
 
-        new Solution().zeroMatrix(matrix);
+        new Solution1().zeroMatrix(matrix);
 
         assertArrayEquals(expected, matrix);
     }

@@ -3,7 +3,7 @@ package com.marcioggs.crackingthecodeinterview.chapter1.exercise8;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution {
+public class Solution1 {
 
     public void zeroMatrix(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
