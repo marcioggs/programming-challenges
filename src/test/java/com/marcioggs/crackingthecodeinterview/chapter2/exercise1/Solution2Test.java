@@ -5,13 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SolutionTest {
+public class Solution2Test {
 
     @Test
     public void removeDuplicates1() {
         SingleLinkedListNode<Integer> first = new SingleLinkedListNode<>(1, null);
 
-        new Solution().removeDuplicates(first);
+        new Solution2().removeDuplicates(first);
 
         assertEquals(1, (int) first.value);
         assertNull(first.next);
@@ -22,7 +22,7 @@ public class SolutionTest {
         SingleLinkedListNode<Integer> second = new SingleLinkedListNode<>(2, null);
         SingleLinkedListNode<Integer> first = new SingleLinkedListNode<>(1, second);
 
-        new Solution().removeDuplicates(first);
+        new Solution2().removeDuplicates(first);
 
         assertEquals(1, (int) first.value);
         assertEquals(2, (int) first.next.value);
@@ -34,7 +34,7 @@ public class SolutionTest {
         SingleLinkedListNode<Integer> second = new SingleLinkedListNode<>(1, null);
         SingleLinkedListNode<Integer> first = new SingleLinkedListNode<>(1, second);
 
-        new Solution().removeDuplicates(first);
+        new Solution2().removeDuplicates(first);
 
         assertEquals(1, (int) first.value);
         assertNull(first.next);
@@ -47,7 +47,7 @@ public class SolutionTest {
         SingleLinkedListNode<Integer> second = new SingleLinkedListNode<>(2, third);
         SingleLinkedListNode<Integer> first = new SingleLinkedListNode<>(1, second);
 
-        new Solution().removeDuplicates(first);
+        new Solution2().removeDuplicates(first);
 
         assertEquals(1, (int) first.value);
         assertEquals(2, (int) first.next.value);

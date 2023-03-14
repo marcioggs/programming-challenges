@@ -5,7 +5,7 @@ import com.marcioggs.crackingthecodeinterview.chapter2.SingleLinkedListNode;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution {
+public class Solution1 {
 
     public <T> void removeDuplicates(SingleLinkedListNode<T> root) {
         if (root == null) {
@@ -23,5 +23,3 @@ public class Solution {
         }
     }
 }
-
-// 1 2 1 3
